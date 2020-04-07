@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "centralus"
+        },
+        "networkInterfaceName": {
+            "value": "venkytest217"
+        },
+        "networkSecurityGroupName": {
+            "value": "VenkyTest-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/0d958d1e-4b62-4c97-8e42-7f2883e1a2a1/resourceGroups/VenkRG/providers/Microsoft.Network/virtualNetworks/VenkyResGrp-vnet"
+        },
+        "publicIpAddressName": {
+            "value": "VenkyTest-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "VenkyTest"
+        },
+        "virtualMachineRG": {
+            "value": "VenkRG"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1ls"
+        },
+        "adminUsername": {
+            "value": "Venky"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "storageaccountvenkr86b6"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/0d958d1e-4b62-4c97-8e42-7f2883e1a2a1/resourceGroups/VenkRG/providers/Microsoft.Storage/storageAccounts/storageaccountvenkr86b6"
+        }
+    }
+}
