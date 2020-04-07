@@ -6,7 +6,7 @@
       "value": "Venky"
     },
     "dnsNameForPublicIP": {
-      "value": "TestVM"
+      "value": "testvm"
     }
   }
 }
