@@ -1,5 +1,5 @@
 ﻿
-# Variables for common value
+# Variables for common values
 $resourceGroup = "PowershellRG"
 $location = "EAST US"
 $vmName = "PowershellVM"
